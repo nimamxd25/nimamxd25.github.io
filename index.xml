@@ -1,25 +1,25 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Hlf&#39;s Site</title>
-        <link>http://example.org/</link>
+        <link>https://nimamxd25.github.io/</link>
         <description>Hlf&#39;s Site</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>879251258@qq.com (Hlf)</managingEditor>
             <webMaster>879251258@qq.com (Hlf)</webMaster><lastBuildDate>Mon, 19 Sep 2022 00:36:50 &#43;0800</lastBuildDate>
-            <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+            <atom:link href="https://nimamxd25.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>使用Hugo&#43;github建立你的第一个博客</title>
-    <link>http://example.org/posts/hugo-&#43;-github-%E5%BB%BA%E7%AB%8B%E7%BD%91%E7%AB%99/</link>
+    <link>https://nimamxd25.github.io/posts/hugo-&#43;-github-%E5%BB%BA%E7%AB%8B%E7%BD%91%E7%AB%99/</link>
     <pubDate>Sat, 17 Sep 2022 22:32:36 &#43;0800</pubDate>
     <author>HLF</author>
-    <guid>http://example.org/posts/hugo-&#43;-github-%E5%BB%BA%E7%AB%8B%E7%BD%91%E7%AB%99/</guid>
+    <guid>https://nimamxd25.github.io/posts/hugo-&#43;-github-%E5%BB%BA%E7%AB%8B%E7%BD%91%E7%AB%99/</guid>
     <description><![CDATA[很多时候会发现事情做完了，但是却没有记录，想要回溯的时候就只剩下模糊的记忆了，所以建立个人博客就是一个很好的选择。 建站的主要过程分为三步： 安]]></description>
 </item>
 <item>
     <title>Blog Test</title>
-    <link>http://example.org/posts/blog-test/</link>
+    <link>https://nimamxd25.github.io/posts/blog-test/</link>
     <pubDate>Mon, 19 Sep 2022 00:36:50 &#43;0800</pubDate>
     <author>Hlf</author>
-    <guid>http://example.org/posts/blog-test/</guid>
+    <guid>https://nimamxd25.github.io/posts/blog-test/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>
