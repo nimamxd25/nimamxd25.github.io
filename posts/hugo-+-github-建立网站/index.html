@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/nimamxd25.github.io\/posts\/hugo-\u002b-github-%E5%BB%BA%E7%AB%8B%E7%BD%91%E7%AB%99\/"
-        },"genre": "posts","keywords": "hugo, github","wordcount":  2314 ,
+        },"genre": "posts","keywords": "hugo, github","wordcount":  2551 ,
         "url": "https:\/\/nimamxd25.github.io\/posts\/hugo-\u002b-github-%E5%BB%BA%E7%AB%8B%E7%BD%91%E7%AB%99\/","datePublished": "2022-09-17T22:32:36+08:00","dateModified": "2022-09-17T22:32:36+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -104,8 +104,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">使用Hugo+github建立你的第一个博客</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>HLF</a></span>&nbsp;<span class="post-category">included in <a href="/categories/tech/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Tech</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-09-17">2022-09-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2314 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-09-17">2022-09-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2551 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;6 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
@@ -137,6 +137,7 @@
         <li><a href="#32-将网页推送至github仓库">3.2 将网页推送至Github仓库</a></li>
       </ul>
     </li>
+    <li><a href="#4-绑定域名">4 绑定域名</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
@@ -515,6 +516,35 @@
 <p>📌<strong>Note</strong>
 第一次Push失败的话，执行<code>git push -u origin master -f</code></p>
 </blockquote>
+<h2 id="4-绑定域名">4 绑定域名</h2>
+<p>Github Pages可以绑定自己的域名，域名可以去阿里云或腾讯云购买，将域名解析到Github Pages主机上。</p>
+<p>我买的是腾讯云，域名购买这里不做详细介绍，主要讲一下域名解析。域名解析主要是需要获取Github Pages主机的IP地址。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/nimamxd25/blogimg/main/20220919133721.png"
+        data-srcset="https://raw.githubusercontent.com/nimamxd25/blogimg/main/20220919133721.png, https://raw.githubusercontent.com/nimamxd25/blogimg/main/20220919133721.png 1.5x, https://raw.githubusercontent.com/nimamxd25/blogimg/main/20220919133721.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/nimamxd25/blogimg/main/20220919133721.png"
+        title="https://raw.githubusercontent.com/nimamxd25/blogimg/main/20220919133721.png" /></p>
+<p>Github Pages主机IP可以采用<code>ping username.github.io</code>获取，其中<code>185.199.110.153</code>就是本站的主机IP，将IP填入并开始解析即可。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/nimamxd25/blogimg/main/20220919134128.png"
+        data-srcset="https://raw.githubusercontent.com/nimamxd25/blogimg/main/20220919134128.png, https://raw.githubusercontent.com/nimamxd25/blogimg/main/20220919134128.png 1.5x, https://raw.githubusercontent.com/nimamxd25/blogimg/main/20220919134128.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/nimamxd25/blogimg/main/20220919134128.png"
+        title="https://raw.githubusercontent.com/nimamxd25/blogimg/main/20220919134128.png" /></p>
+<p>再将解析好的域名填入GitHub Pages对应位置即可，接着即可使用域名访问网站
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/nimamxd25/blogimg/main/20220919134349.png"
+        data-srcset="https://raw.githubusercontent.com/nimamxd25/blogimg/main/20220919134349.png, https://raw.githubusercontent.com/nimamxd25/blogimg/main/20220919134349.png 1.5x, https://raw.githubusercontent.com/nimamxd25/blogimg/main/20220919134349.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/nimamxd25/blogimg/main/20220919134349.png"
+        title="https://raw.githubusercontent.com/nimamxd25/blogimg/main/20220919134349.png" /></p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
