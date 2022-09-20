@@ -52,7 +52,7 @@ Markdown是一种轻量级标记语言，表现形式为纯文本
 其实就是把Obsidian当前端，用Python写后端，不知道这么说是否准确。
 ### [教你怎么在Obsidian里用Python，让你的Obsidian更强大！](https://www.bilibili.com/video/BV1MS4y1z7CX)
 
-<iframe src="//player.bilibili.com/player.html?aid=726771708&bvid=BV1MS4y1z7CX&cid=726177282&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" frameborder="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
+<iframe src="https://player.bilibili.com/player.html?aid=726771708&bvid=BV1MS4y1z7CX&cid=726177282&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" frameborder="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
 
 ### [是时候让Obsidian帮你追更B站UP了！](https://www.bilibili.com/video/BV1Mr4y147HN)
 
@@ -64,4 +64,8 @@ Markdown是一种轻量级标记语言，表现形式为纯文本
 
 
 
+
+<div class="admonition important">
+<p>This is an admonition box without a title.</p>
+</div>
 
