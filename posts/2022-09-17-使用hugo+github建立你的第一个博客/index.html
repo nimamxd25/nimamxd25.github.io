@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/nimamxd25.github.io\/posts\/2022-09-17-%E4%BD%BF%E7%94%A8hugo\u002bgithub%E5%BB%BA%E7%AB%8B%E4%BD%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2\/"
-        },"genre": "posts","keywords": "hugo, github","wordcount":  2585 ,
+        },"genre": "posts","keywords": "hugo, github","wordcount":  2566 ,
         "url": "https:\/\/nimamxd25.github.io\/posts\/2022-09-17-%E4%BD%BF%E7%94%A8hugo\u002bgithub%E5%BB%BA%E7%AB%8B%E4%BD%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2\/","datePublished": "2022-09-17T22:32:36+08:00","dateModified": "2022-09-17T22:32:36+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -104,7 +104,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">使用Hugo+github建立你的第一个博客</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>HLF</a></span>&nbsp;<span class="post-category">included in <a href="/categories/%E6%8A%80%E6%9C%AF/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>技术</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-09-17">2022-09-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2585 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-09-17">2022-09-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2566 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;6 minutes&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
@@ -268,14 +268,22 @@
         data-sizes="auto"
         alt="https://s1.vika.cn/space/2022/09/20/0069180c2bfa41109f099593f7bdc1a9"
         title="https://s1.vika.cn/space/2022/09/20/0069180c2bfa41109f099593f7bdc1a9" /></p>
-<blockquote>
-<p>📌<strong>Note</strong><br>
-启用<code>hugo server</code>后，此时对网页文件夹内所有的修改，包括博文、配置信息文件等，都会实时同步到<code>http://localhost:1313/</code>，可以很方便的进行网页效果的预览</p>
-</blockquote>
-<blockquote>
-<p>📌<strong>Note</strong><br>
-此时网页应该是空白的，因为刚刚建立的网站，没有给主题是不会显示内容的</p>
-</blockquote>
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw" aria-hidden="true"></i>Note<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">启用<code>hugo server</code>后，此时对网页文件夹内所有的修改，包括博文、配置信息文件等，都会实时同步到<code>http://localhost:1313/</code>，可以很方便的进行网页效果的预览</div>
+        </div>
+    </div>
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw" aria-hidden="true"></i>Note<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">此时网页应该是空白的，因为刚刚建立的网站，没有给主题是不会显示内容的</div>
+        </div>
+    </div>
 <h3 id="22-给网页一个主题">2.2 给网页一个主题</h3>
 <p>刚刚生成的网站是没有任何内容的，需要下载个主题。Hugo 社区有很丰富的主题，可以通过官网 <a href="https://themes.gohugo.io/" target="_blank" rel="noopener noreffer ">Themes</a> 菜单选择自己喜欢的风格。我选择的是<a href="https://themes.gohugo.io/themes/loveit/" target="_blank" rel="noopener noreffer ">LoveIt </a>这个主题，以下讲述一下配置过程。</p>
 <h4 id="一般主题的使用方法">一般主题的使用方法</h4>
@@ -301,10 +309,14 @@
 </div>
 </div><p>或者你可以下载主题的 <a href="https://github.com/dillonzq/LoveIt/releases" target="_blank" rel="noopener noreffer ">最新版本 .zip 文件</a> 并且解压放到 <code>themes</code> 目录.</p>
 <p>接着，将theme/LoveIt/exampleSite/文件下所有文件复制到blog根目录下，再次通过<code>hugo server</code>命令，访问 <code>http://localhost:1313</code> 即可看到网页内容</p>
-<blockquote>
-<p>📌<strong>Note</strong><br>
-通过<code>scoop install git</code>安装git模块</p>
-</blockquote>
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw" aria-hidden="true"></i>Note<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">通过<code>scoop install git</code>安装git模块</div>
+        </div>
+    </div>
 <h4 id="关于loveit主题">关于LoveIt主题</h4>
 <p>一般主题按照上述的方法即可正常使用，不过对于LoveIt主题，按照上述方法是会出错的。</p>
 <p>首先，LoveIt主题exampleSite中提供的config.toml无法通过上述方法使用，具体怎么修改这里不做赘述，直接将以下内容替换到config.toml中。</p>
@@ -458,10 +470,14 @@
         data-sizes="auto"
         alt="https://s1.vika.cn/space/2022/09/20/fba808849aea400ebe46765966a6b8b7"
         title="https://s1.vika.cn/space/2022/09/20/fba808849aea400ebe46765966a6b8b7" /></p>
-<blockquote>
-<p>📌<strong>Note</strong><br>
-如果你的仓库名字设置错了，可以进仓库设置中重命名</p>
-</blockquote>
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw" aria-hidden="true"></i>Note<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">如果你的仓库名字设置错了，可以进仓库设置中重命名</div>
+        </div>
+    </div>
 <p>再进入仓库Pages设置页面，设置成下图所示。其中，<code>https://nimamxd25.github.io</code>就是你的网站地址，需要将config.toml中的<code>baseURL</code>修改为该地址。
 <img
         class="lazyload"
@@ -516,14 +532,23 @@
 </span></span><span class="line"><span class="cl"><span class="n">git</span> <span class="n">push</span> <span class="n">-u</span> <span class="n">origin</span> <span class="n">master</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><blockquote>
-<p>📌<strong>Note</strong>
-在执行<code>git add .</code> 时可能会出现<code>LF will be replaced by CRLF the next time Git touches it</code>错误，需要在<code>git add .</code>之前先执行<code>git config --global core.autocrlf false</code>命令</p>
-</blockquote>
-<blockquote>
-<p>📌<strong>Note</strong>
-第一次Push失败的话，执行<code>git push -u origin master -f</code></p>
-</blockquote>
+</div><div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw" aria-hidden="true"></i>Note<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">在执行<code>git add .</code> 时可能会出现<code>LF will be replaced by CRLF the next time Git touches it</code>错误，需要在<code>git add .</code>之前先执行<code>git config --global core.autocrlf false</code>命令</div>
+        </div>
+    </div>
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw" aria-hidden="true"></i>Note<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">📌<strong>Note</strong>
+第一次Push失败的话，执行<code>git push -u origin master -f</code></div>
+        </div>
+    </div>
 <h2 id="4-换一个你喜欢的域名">4 换一个你喜欢的域名</h2>
 <p>Github Pages可以绑定自己的域名，域名可以去阿里云或腾讯云购买，将域名解析到Github Pages主机上。</p>
 <p>我买的是腾讯云，域名购买这里不做详细介绍，主要讲一下域名解析。域名解析主要是需要获取Github Pages主机的IP地址。</p>
@@ -561,7 +586,9 @@
                 <span>Updated on 2022-09-17</span>
             </div></div>
         <div class="post-info-line">
-            <div class="post-info-md"></div>
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/posts/2022-09-17-%E4%BD%BF%E7%94%A8hugo&#43;github%E5%BB%BA%E7%AB%8B%E4%BD%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
             <div class="post-info-share">
                 <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://nimamxd25.github.io/posts/2022-09-17-%E4%BD%BF%E7%94%A8hugo&#43;github%E5%BB%BA%E7%AB%8B%E4%BD%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/" data-title="使用Hugo&#43;github建立你的第一个博客" data-hashtags="hugo,github"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://nimamxd25.github.io/posts/2022-09-17-%E4%BD%BF%E7%94%A8hugo&#43;github%E5%BB%BA%E7%AB%8B%E4%BD%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/" data-hashtag="hugo"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://nimamxd25.github.io/posts/2022-09-17-%E4%BD%BF%E7%94%A8hugo&#43;github%E5%BB%BA%E7%AB%8B%E4%BD%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/" data-title="使用Hugo&#43;github建立你的第一个博客"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://nimamxd25.github.io/posts/2022-09-17-%E4%BD%BF%E7%94%A8hugo&#43;github%E5%BB%BA%E7%AB%8B%E4%BD%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/" data-title="使用Hugo&#43;github建立你的第一个博客"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://nimamxd25.github.io/posts/2022-09-17-%E4%BD%BF%E7%94%A8hugo&#43;github%E5%BB%BA%E7%AB%8B%E4%BD%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/" data-title="使用Hugo&#43;github建立你的第一个博客" data-image="https://s1.vika.cn/space/2022/09/20/577eaa1ae03f491bb8dc6fc55985abf3"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
             </div>
@@ -590,5 +617,5 @@
             </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
                 <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":50}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>
