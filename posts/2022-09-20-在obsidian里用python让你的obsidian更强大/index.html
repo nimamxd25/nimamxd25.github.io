@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>在Obsidian里用Python，让你的Obsidian更强大！ - Hlf&#39;s Site</title><meta name="Description" content=""><meta property="og:title" content="在Obsidian里用Python，让你的Obsidian更强大！" />
+<meta property="og:description" content="我的B站ID是一条小何波浪宽又宽，这是我的B站空间 在我已经发布的视频中，我分享了我写的一些Python小脚本，比如可以将批量的把B站视频和本" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nimamxd25.github.io/posts/2022-09-20-%E5%9C%A8obsidian%E9%87%8C%E7%94%A8python%E8%AE%A9%E4%BD%A0%E7%9A%84obsidian%E6%9B%B4%E5%BC%BA%E5%A4%A7/" /><meta property="og:image" content="https://nimamxd25.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-09-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-09-20T00:00:00+00:00" /><meta property="og:site_name" content="Hlf&#39;s Cool Site" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://nimamxd25.github.io/logo.png"/>
+
+<meta name="twitter:title" content="在Obsidian里用Python，让你的Obsidian更强大！"/>
+<meta name="twitter:description" content="我的B站ID是一条小何波浪宽又宽，这是我的B站空间 在我已经发布的视频中，我分享了我写的一些Python小脚本，比如可以将批量的把B站视频和本"/>
+<meta name="application-name" content="我的网站">
+<meta name="apple-mobile-web-app-title" content="我的网站"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://nimamxd25.github.io/posts/2022-09-20-%E5%9C%A8obsidian%E9%87%8C%E7%94%A8python%E8%AE%A9%E4%BD%A0%E7%9A%84obsidian%E6%9B%B4%E5%BC%BA%E5%A4%A7/" /><link rel="prev" href="https://nimamxd25.github.io/posts/2022-09-19-%E5%BF%AB%E9%80%9F%E6%B8%85%E7%A9%BAgithub%E4%BB%93%E5%BA%93/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "在Obsidian里用Python，让你的Obsidian更强大！",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/nimamxd25.github.io\/posts\/2022-09-20-%E5%9C%A8obsidian%E9%87%8C%E7%94%A8python%E8%AE%A9%E4%BD%A0%E7%9A%84obsidian%E6%9B%B4%E5%BC%BA%E5%A4%A7\/"
+        },"genre": "posts","keywords": "Python, Obsidian","wordcount":  1034 ,
+        "url": "https:\/\/nimamxd25.github.io\/posts\/2022-09-20-%E5%9C%A8obsidian%E9%87%8C%E7%94%A8python%E8%AE%A9%E4%BD%A0%E7%9A%84obsidian%E6%9B%B4%E5%BC%BA%E5%A4%A7\/","datePublished": "2022-09-20T00:00:00+00:00","dateModified": "2022-09-20T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "HLF"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Hlf&#39;s Site">Hlf&#39;s Cool Site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Hlf&#39;s Site">Hlf&#39;s Cool Site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">在Obsidian里用Python，让你的Obsidian更强大！</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>HLF</a></span>&nbsp;<span class="post-category">included in <a href="/categories/%E6%8A%80%E6%9C%AF/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>技术</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-09-20">2022-09-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1034 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://s1.vika.cn/space/2022/09/21/46504089201e43549712b74470ec73aa"
+        data-srcset="https://s1.vika.cn/space/2022/09/21/46504089201e43549712b74470ec73aa, https://s1.vika.cn/space/2022/09/21/46504089201e43549712b74470ec73aa 1.5x, https://s1.vika.cn/space/2022/09/21/46504089201e43549712b74470ec73aa 2x"
+        data-sizes="auto"
+        alt="https://s1.vika.cn/space/2022/09/21/46504089201e43549712b74470ec73aa"
+        title="https://s1.vika.cn/space/2022/09/21/46504089201e43549712b74470ec73aa" /></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#markdown性质">Markdown性质</a></li>
+    <li><a href="#python如何在markdown中发挥作用">Python如何在Markdown中发挥作用</a></li>
+    <li><a href="#选择合适的markdown书写工具--obsidian">选择合适的Markdown书写工具 —— Obsidian</a></li>
+    <li><a href="#我关于在obsidian里用python的一点探索">我关于在Obsidian里用Python的一点探索</a>
+      <ul>
+        <li><a href="#教你怎么在obsidian里用python让你的obsidian更强大httpswwwbilibilicomvideobv1ms4y1z7cx"><a href="https://www.bilibili.com/video/BV1MS4y1z7CX">教你怎么在Obsidian里用Python，让你的Obsidian更强大！</a></a></li>
+        <li><a href="#是时候让obsidian帮你追更b站up了httpswwwbilibilicomvideobv1mr4y147hn"><a href="https://www.bilibili.com/video/BV1Mr4y147HN">是时候让Obsidian帮你追更B站UP了！</a></a></li>
+        <li><a href="#如何借助python把b站视频笔记拉回obsidian中httpswwwbilibilicomvideobv1z541197jf"><a href="https://www.bilibili.com/video/BV1z541197jf">如何借助Python把B站视频笔记拉回Obsidian中</a></a></li>
+        <li><a href="#教你一键把b站视频收藏夹同步到obsidian中httpswwwbilibilicomvideobv1c34y177we"><a href="https://www.bilibili.com/video/BV1C34y177We">教你一键把B站视频收藏夹同步到Obsidian中</a></a></li>
+        <li><a href="#如何用好obsidian看b站学习资源httpswwwbilibilicomvideobv1ey4y1877x"><a href="https://www.bilibili.com/video/BV1eY4y1877X">如何用好Obsidian看B站学习资源</a></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>我的B站ID是<strong>一条小何波浪宽又宽</strong>，这是我的<a href="https://space.bilibili.com/18225929" target="_blank" rel="noopener noreffer ">B站空间</a></p>
+<p>在我已经发布的视频中，我分享了我写的一些Python小脚本，比如可以将批量的把B站视频和本地视频与Obsidian笔记链接起来，帮助大家更好的学习等。</p>
+<p>这篇博文我想讲一讲，我为什么要将Python融入到Markdown和Obsidian的工作和学习当中，要说清楚这个问题，就得从Markdown的性质说起。</p>
+<h2 id="markdown性质">Markdown性质</h2>
+<p>Markdown是一种轻量级标记语言，表现形式为纯文本</p>
+<p>如果我们分别在txt和typora（一种Markdown书写工具）中输入同样的文本</p>
+<div align=center>
+<img src="https://s1.vika.cn/space/2022/09/21/3a38a3c253544821b7df13a8e2f2399f" alt="drawing" style="width:300px;"/><img src="https://s1.vika.cn/space/2022/09/21/b66a1fa99ceb4255865f274a6dd4318d" alt="drawing" style="width:300px;"/>
+</div>
+<p>我们可以看到，同样的内容，在txt文件与markdown文件中显示的效果完全不同。</p>
+<p>txt文件中显示的是一些文本与符号，markdown文件中将符号进行了识别，并进行了不一样的表达，如“#”被识别成了一级标题，“##”被识别成了二级标题，“- ”识别成了无须列表</p>
+<p>其余符号见下表</p>
+<div align=center>
+<img src="https://s1.vika.cn/space/2022/09/21/cb931e980f134b6585e361f7a2f59227" alt="drawing" style="width:600px;"/>
+</div>
+<p>总结一下</p>
+<ul>
+<li>markdown语法将<strong>符号与文本</strong>以一种更加美观、更加有序的方式呈现出来</li>
+<li>在Markdown中，我们只需要输入文本与符号，呈现形式交由Markdown语法与相应的书写软件完成</li>
+<li>相比起word和txt，markdown可以让我们不再费心于格式，而专注于内容</li>
+</ul>
+<h2 id="python如何在markdown中发挥作用">Python如何在Markdown中发挥作用</h2>
+<ul>
+<li>输入文本与符号，可以手动输入，也可以借由其他工具代为输入，比如Python</li>
+<li>Python是一种阅读性很强的编程语言，具有强大的文本处理能力，以及大量的功能库</li>
+<li>利用Python可以轻松的对文本进行处理，并按语法的要求形成Makrdown文档</li>
+</ul>
+<h2 id="选择合适的markdown书写工具--obsidian">选择合适的Markdown书写工具 —— Obsidian</h2>
+<ul>
+<li>需要功能齐全，比如支持双链，界面美观，支持Markdown主题，方便使用Python</li>
+<li>Obsidian完美支持了上述两点</li>
+<li>Shell Command插件可以通过Shell命令直接运行Python脚本
+<ul>
+<li>Button插件可以将命令转为按钮，方便实用</li>
+<li>支持CSS，方便定制属于自己的主题，如果不会CSS，还有Style Setting插件方便修改</li>
+<li>……</li>
+</ul>
+</li>
+</ul>
+<h2 id="我关于在obsidian里用python的一点探索">我关于在Obsidian里用Python的一点探索</h2>
+<p>其实就是把Obsidian当前端，用Python写后端，不知道这么说是否准确。</p>
+<h3 id="教你怎么在obsidian里用python让你的obsidian更强大httpswwwbilibilicomvideobv1ms4y1z7cx"><a href="https://www.bilibili.com/video/BV1MS4y1z7CX" target="_blank" rel="noopener noreffer ">教你怎么在Obsidian里用Python，让你的Obsidian更强大！</a></h3>
+<div class="bilibili"><iframe src="//player.bilibili.com/player.html?bvid=BV1MS4y1z7CX&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe></div>
+
+<h3 id="是时候让obsidian帮你追更b站up了httpswwwbilibilicomvideobv1mr4y147hn"><a href="https://www.bilibili.com/video/BV1Mr4y147HN" target="_blank" rel="noopener noreffer ">是时候让Obsidian帮你追更B站UP了！</a></h3>
+<div class="bilibili"><iframe src="//player.bilibili.com/player.html?bvid=BV1Mr4y147HN&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe></div>
+
+<h3 id="如何借助python把b站视频笔记拉回obsidian中httpswwwbilibilicomvideobv1z541197jf"><a href="https://www.bilibili.com/video/BV1z541197jf" target="_blank" rel="noopener noreffer ">如何借助Python把B站视频笔记拉回Obsidian中</a></h3>
+<div class="bilibili"><iframe src="//player.bilibili.com/player.html?bvid=BV1z541197jf&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe></div>
+
+<h3 id="教你一键把b站视频收藏夹同步到obsidian中httpswwwbilibilicomvideobv1c34y177we"><a href="https://www.bilibili.com/video/BV1C34y177We" target="_blank" rel="noopener noreffer ">教你一键把B站视频收藏夹同步到Obsidian中</a></h3>
+<div class="bilibili"><iframe src="//player.bilibili.com/player.html?bvid=BV1C34y177We&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe></div>
+
+<h3 id="如何用好obsidian看b站学习资源httpswwwbilibilicomvideobv1ey4y1877x"><a href="https://www.bilibili.com/video/BV1eY4y1877X" target="_blank" rel="noopener noreffer ">如何用好Obsidian看B站学习资源</a></h3>
+<div class="bilibili"><iframe src="//player.bilibili.com/player.html?bvid=BV1eY4y1877X&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe></div>
+
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-09-20</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/posts/2022-09-20-%E5%9C%A8obsidian%E9%87%8C%E7%94%A8python%E8%AE%A9%E4%BD%A0%E7%9A%84obsidian%E6%9B%B4%E5%BC%BA%E5%A4%A7/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://nimamxd25.github.io/posts/2022-09-20-%E5%9C%A8obsidian%E9%87%8C%E7%94%A8python%E8%AE%A9%E4%BD%A0%E7%9A%84obsidian%E6%9B%B4%E5%BC%BA%E5%A4%A7/" data-title="在Obsidian里用Python，让你的Obsidian更强大！" data-hashtags="Python,Obsidian"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://nimamxd25.github.io/posts/2022-09-20-%E5%9C%A8obsidian%E9%87%8C%E7%94%A8python%E8%AE%A9%E4%BD%A0%E7%9A%84obsidian%E6%9B%B4%E5%BC%BA%E5%A4%A7/" data-hashtag="Python"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://nimamxd25.github.io/posts/2022-09-20-%E5%9C%A8obsidian%E9%87%8C%E7%94%A8python%E8%AE%A9%E4%BD%A0%E7%9A%84obsidian%E6%9B%B4%E5%BC%BA%E5%A4%A7/" data-title="在Obsidian里用Python，让你的Obsidian更强大！"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://nimamxd25.github.io/posts/2022-09-20-%E5%9C%A8obsidian%E9%87%8C%E7%94%A8python%E8%AE%A9%E4%BD%A0%E7%9A%84obsidian%E6%9B%B4%E5%BC%BA%E5%A4%A7/" data-title="在Obsidian里用Python，让你的Obsidian更强大！"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://nimamxd25.github.io/posts/2022-09-20-%E5%9C%A8obsidian%E9%87%8C%E7%94%A8python%E8%AE%A9%E4%BD%A0%E7%9A%84obsidian%E6%9B%B4%E5%BC%BA%E5%A4%A7/" data-title="在Obsidian里用Python，让你的Obsidian更强大！" data-image="https://s1.vika.cn/space/2022/09/21/46504089201e43549712b74470ec73aa"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/python/">Python</a>,&nbsp;<a href="/tags/obsidian/">Obsidian</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/2022-09-19-%E5%BF%AB%E9%80%9F%E6%B8%85%E7%A9%BAgithub%E4%BB%93%E5%BA%93/" class="prev" rel="prev" title="快速清空GitHub仓库"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>快速清空GitHub仓库</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.102.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Hlf</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

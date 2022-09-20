@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Obsidian - Tag - Hlf&#39;s Site</title>
+        <link>https://nimamxd25.github.io/tags/obsidian/</link>
+        <description>Obsidian - Tag - Hlf&#39;s Site</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>879251258@qq.com (Hlf)</managingEditor>
+            <webMaster>879251258@qq.com (Hlf)</webMaster><lastBuildDate>Tue, 20 Sep 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://nimamxd25.github.io/tags/obsidian/" rel="self" type="application/rss+xml" /><item>
+    <title>在Obsidian里用Python，让你的Obsidian更强大！</title>
+    <link>https://nimamxd25.github.io/posts/2022-09-20-%E5%9C%A8obsidian%E9%87%8C%E7%94%A8python%E8%AE%A9%E4%BD%A0%E7%9A%84obsidian%E6%9B%B4%E5%BC%BA%E5%A4%A7/</link>
+    <pubDate>Tue, 20 Sep 2022 00:00:00 &#43;0000</pubDate>
+    <author>HLF</author>
+    <guid>https://nimamxd25.github.io/posts/2022-09-20-%E5%9C%A8obsidian%E9%87%8C%E7%94%A8python%E8%AE%A9%E4%BD%A0%E7%9A%84obsidian%E6%9B%B4%E5%BC%BA%E5%A4%A7/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://s1.vika.cn/space/2022/09/21/46504089201e43549712b74470ec73aa" referrerpolicy="no-referrer">
+            </div>我的B站ID是一条小何波浪宽又宽，这是我的B站空间 在我已经发布的视频中，我分享了我写的一些Python小脚本，比如可以将批量的把B站视频和本]]></description>
+</item>
+</channel>
+</rss>
