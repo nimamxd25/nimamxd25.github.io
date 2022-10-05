@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>使用Python处理PDF的那些事 - Hlf&#39;s Site</title><meta name="Description" content=""><meta property="og:title" content="使用Python处理PDF的那些事" />
+<meta property="og:description" content="记录一下工作中用到的处理PDF的Python命令，涉及PDF的分割、文本提取、OCR识别等等 PDF分割、提取和删除 ^42737d 本文主要介绍使用PyPD" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nimamxd25.github.io/posts/2022-10-05-%E4%BD%BF%E7%94%A8python%E5%A4%84%E7%90%86pdf%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/" /><meta property="og:image" content="https://nimamxd25.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-10-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-10-05T00:00:00+00:00" /><meta property="og:site_name" content="Hlf&#39;s Cool Site" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://nimamxd25.github.io/logo.png"/>
+
+<meta name="twitter:title" content="使用Python处理PDF的那些事"/>
+<meta name="twitter:description" content="记录一下工作中用到的处理PDF的Python命令，涉及PDF的分割、文本提取、OCR识别等等 PDF分割、提取和删除 ^42737d 本文主要介绍使用PyPD"/>
+<meta name="application-name" content="我的网站">
+<meta name="apple-mobile-web-app-title" content="我的网站"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://nimamxd25.github.io/posts/2022-10-05-%E4%BD%BF%E7%94%A8python%E5%A4%84%E7%90%86pdf%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/" /><link rel="prev" href="https://nimamxd25.github.io/posts/2022-09-21-%E7%94%A8obsidian%E8%BF%9B%E8%A1%8C%E5%8D%9A%E6%96%87%E7%AE%A1%E7%90%86%E5%B9%B6%E5%8F%91%E5%B8%83%E5%88%B0%E7%BD%91%E7%AB%99/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "使用Python处理PDF的那些事",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/nimamxd25.github.io\/posts\/2022-10-05-%E4%BD%BF%E7%94%A8python%E5%A4%84%E7%90%86pdf%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B\/"
+        },"genre": "posts","keywords": "Python, PDF","wordcount":  1268 ,
+        "url": "https:\/\/nimamxd25.github.io\/posts\/2022-10-05-%E4%BD%BF%E7%94%A8python%E5%A4%84%E7%90%86pdf%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B\/","datePublished": "2022-10-05T00:00:00+00:00","dateModified": "2022-10-05T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "HLF"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Hlf&#39;s Site">Hlf&#39;s Cool Site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Hlf&#39;s Site">Hlf&#39;s Cool Site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">使用Python处理PDF的那些事</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>HLF</a></span>&nbsp;<span class="post-category">included in <a href="/categories/%E6%8A%80%E6%9C%AF/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>技术</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-10-05">2022-10-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1268 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://s1.vika.cn/space/2022/10/05/1956368834db40e0a6ff080e20af9190"
+        data-srcset="https://s1.vika.cn/space/2022/10/05/1956368834db40e0a6ff080e20af9190, https://s1.vika.cn/space/2022/10/05/1956368834db40e0a6ff080e20af9190 1.5x, https://s1.vika.cn/space/2022/10/05/1956368834db40e0a6ff080e20af9190 2x"
+        data-sizes="auto"
+        alt="https://s1.vika.cn/space/2022/10/05/1956368834db40e0a6ff080e20af9190"
+        title="https://s1.vika.cn/space/2022/10/05/1956368834db40e0a6ff080e20af9190" /></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#pdf分割提取和删除">PDF分割、提取和删除</a></li>
+    <li><a href="#pdf内容提取">PDF内容提取</a>
+      <ul>
+        <li><a href="#非扫描pdf">非扫描PDF</a></li>
+        <li><a href="#扫描pdf">扫描PDF</a>
+          <ul>
+            <li><a href="#pdf转图片">PDF转图片</a></li>
+            <li><a href="#图片ocr">图片OCR</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#总结">总结</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><blockquote>
+<p>记录一下工作中用到的处理PDF的Python命令，涉及PDF的分割、文本提取、OCR识别等等</p>
+</blockquote>
+<h2 id="pdf分割提取和删除">PDF分割、提取和删除</h2>
+<p>^42737d</p>
+<p>本文主要介绍使用PyPDF2库来实现PDF的分割、删除等。</p>
+<p>首先使用<code>pip install PyPDF2</code>安装好库，并使用<code>import PyPDF2</code>导入该库。</p>
+<p>使用PyPDF2进行PDF分割、提取的代码如下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">split_pdf</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">start_page</span><span class="p">,</span> <span class="n">end_page</span><span class="p">,</span> <span class="n">output_pdf</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">	<span class="c1"># 读取待分割的pdf文件</span>
+</span></span><span class="line"><span class="cl">	<span class="n">input_file</span> <span class="o">=</span> <span class="n">PyPDF2</span><span class="o">.</span><span class="n">PdfFileReader</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">	<span class="c1"># 实例一个 PDF文件编写器</span>
+</span></span><span class="line"><span class="cl">	<span class="n">output_file</span> <span class="o">=</span> <span class="n">PyPDF2</span><span class="o">.</span><span class="n">PdfFileWriter</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">	<span class="c1"># 把分割的文件添加在一起</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">start_page</span><span class="p">,</span> <span class="n">end_page</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">		<span class="n">output_file</span><span class="o">.</span><span class="n">addPage</span><span class="p">(</span><span class="n">input_file</span><span class="o">.</span><span class="n">getPage</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">	<span class="c1"># 将分割的文件输出保存</span>
+</span></span><span class="line"><span class="cl">	<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">output_pdf</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">		<span class="n">output_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><strong>file_path</strong>：需要进行操作的PDF路径，可以是相对或者绝对路径</li>
+<li><strong>start_page、end_page</strong>：需要提取的PDF起始、结束页</li>
+<li><strong>output_pdf</strong>：导出的PDF路径（包含导出pdf名称，如&quot;D:/output.pdf&quot;）</li>
+</ul>
+<p>仔细看看代码就会发现，其实PyPDF2是将PDF每页读取，再将你需要的PDF进行合并，这样就完成了PDF的分割和提取。</p>
+<p>如果想删除某页，只需要修改<code>start_page</code>和 <code>end_page</code>即可</p>
+<h2 id="pdf内容提取">PDF内容提取</h2>
+<h3 id="非扫描pdf">非扫描PDF</h3>
+<p><strong>非扫描PDF</strong>指的是通过文档直接转换的PDF，简单的判断依据就是你打开任意一个PDF阅读器，可以选取文本并复制。</p>
+<p>这里依然使用的是PyPDF2，代码逻辑是逐页获取PDF文本内容，再判断目标文本是否在该页出现，并返回出现目标文本的页码。结合<a href="##PDF%e5%88%86%e5%89%b2%e3%80%81%e6%8f%90%e5%8f%96%e5%92%8c%e5%88%a0%e9%99%a4" rel="">PDF分割、提取和删除</a>即可实现在以指定文本对PDF进行分割。</p>
+<p>代码如下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Python" data-lang="Python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">get_page</span><span class="p">(</span><span class="n">file_pathe</span><span class="p">,</span> <span class="n">String</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">	<span class="c1"># 读取PDF</span>
+</span></span><span class="line"><span class="cl">	<span class="nb">object</span> <span class="o">=</span> <span class="n">PyPDF2</span><span class="o">.</span><span class="n">PdfFileReader</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="c1"># 获取PDF页数</span>
+</span></span><span class="line"><span class="cl">	<span class="n">NumPages</span> <span class="o">=</span> <span class="nb">object</span><span class="o">.</span><span class="n">getNumPages</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">	<span class="n">split_page</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">	<span class="c1"># 逐页判断</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">NumPages</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">		<span class="c1"># 获取第i页文本</span>
+</span></span><span class="line"><span class="cl">		<span class="n">PageObj</span> <span class="o">=</span> <span class="nb">object</span><span class="o">.</span><span class="n">getPage</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="n">Text</span> <span class="o">=</span> <span class="n">PageObj</span><span class="o">.</span><span class="n">extractText</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">		<span class="c1"># 判断String是否在i页出现</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">String</span><span class="p">,</span> <span class="n">Text</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">			<span class="n">split_page</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="c1"># 返回出现String的页码</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">split_page</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><strong>file_path</strong>：需要进行操作的PDF路径，可以是相对或者绝对路径</li>
+<li><strong>String</strong>：需要识别的文本</li>
+</ul>
+<h3 id="扫描pdf">扫描PDF</h3>
+<p><strong>扫描PDF</strong>就是用设备或者手机扫描下来的文档，简单来说就是文档的照片。这类PDF里边每页都是一张图片，不包含任何文本信息。要从这类PDF中提取文本信息，就需要涉及到OCR。</p>
+<p>OCR就是对图片内容进行识别，转为相应的文本。首先需要将PDF转为图片，并对图片进行OCR识别。</p>
+<h4 id="pdf转图片">PDF转图片</h4>
+<p>关于PDF转图片的Python库，网上查到的主要有两个，pdf2image和fitz。这里主要介绍fitz，因为pdf2image实在太慢。代码的思路就是读取、然后逐页转图，比较简单。</p>
+<p>代码如下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Python" data-lang="Python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">pdf2img</span><span class="p">(</span><span class="n">file_pat</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">	<span class="n">mat</span> <span class="o">=</span> <span class="n">fitz</span><span class="o">.</span><span class="n">Matrix</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="n">doc</span> <span class="o">=</span> <span class="n">fitz</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">doc</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">		<span class="n">img_path</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">.png&#39;</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">img_path</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">			<span class="c1"># 转图片</span>
+</span></span><span class="line"><span class="cl">			<span class="n">pix</span> <span class="o">=</span> <span class="n">doc</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">get_pixmap</span><span class="p">(</span><span class="n">matrix</span><span class="o">=</span><span class="n">mat</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="c1"># 保存图片 </span>
+</span></span><span class="line"><span class="cl">			<span class="n">pix</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">img_path</span><span class="p">)</span>  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="图片ocr">图片OCR</h4>
+<p>Python的OCR库不少，这里用的是paddleocr，因为比较完善，能查到的资料也比较多，使用也比较简单。结合<a href="####PDF%e8%bd%ac%e5%9b%be%e7%89%87" rel="">PDF转图片</a>就可以实现逐页的文本识别。</p>
+<p>代码如下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">pdf2img</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">String</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">	<span class="n">mat</span> <span class="o">=</span> <span class="n">fitz</span><span class="o">.</span><span class="n">Matrix</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="n">doc</span> <span class="o">=</span> <span class="n">fitz</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="n">ocr</span> <span class="o">=</span> <span class="n">PaddleOCR</span><span class="p">(</span><span class="n">use_angle_cls</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">use_gpu</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">lang</span><span class="o">=</span><span class="s2">&#34;ch&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="n">split_pages</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">doc</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">		<span class="n">img_path</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;pic/</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">.png&#39;</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">img_path</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">			<span class="c1"># 转图片</span>
+</span></span><span class="line"><span class="cl">			<span class="n">pix</span> <span class="o">=</span> <span class="n">doc</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">get_pixmap</span><span class="p">(</span><span class="n">matrix</span><span class="o">=</span><span class="n">mat</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="c1"># 保存图片 </span>
+</span></span><span class="line"><span class="cl">			<span class="n">pix</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">img_path</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl">		<span class="c1"># 文本识别</span>
+</span></span><span class="line"><span class="cl">		<span class="n">result</span> <span class="o">=</span> <span class="n">ocr</span><span class="o">.</span><span class="n">ocr</span><span class="p">(</span><span class="n">img_path</span><span class="p">,</span> <span class="bp">cls</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="n">OCR_result</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">result</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">		<span class="c1"># 判断目标文本</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">String</span><span class="p">,</span> <span class="n">OCR_result</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">			<span class="n">split_page</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">split_page</span> 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="总结">总结</h2>
+<p>这里就基本上总结了日常工作会用到的PDF操作，获取PDF内容之后的操作就看个人需求了。</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-10-05</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/posts/2022-10-05-%E4%BD%BF%E7%94%A8python%E5%A4%84%E7%90%86pdf%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://nimamxd25.github.io/posts/2022-10-05-%E4%BD%BF%E7%94%A8python%E5%A4%84%E7%90%86pdf%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/" data-title="使用Python处理PDF的那些事" data-hashtags="Python,PDF"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://nimamxd25.github.io/posts/2022-10-05-%E4%BD%BF%E7%94%A8python%E5%A4%84%E7%90%86pdf%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/" data-hashtag="Python"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://nimamxd25.github.io/posts/2022-10-05-%E4%BD%BF%E7%94%A8python%E5%A4%84%E7%90%86pdf%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/" data-title="使用Python处理PDF的那些事"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://nimamxd25.github.io/posts/2022-10-05-%E4%BD%BF%E7%94%A8python%E5%A4%84%E7%90%86pdf%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/" data-title="使用Python处理PDF的那些事"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://nimamxd25.github.io/posts/2022-10-05-%E4%BD%BF%E7%94%A8python%E5%A4%84%E7%90%86pdf%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/" data-title="使用Python处理PDF的那些事" data-image="https://s1.vika.cn/space/2022/10/05/1956368834db40e0a6ff080e20af9190"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/python/">Python</a>,&nbsp;<a href="/tags/pdf/">PDF</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/2022-09-21-%E7%94%A8obsidian%E8%BF%9B%E8%A1%8C%E5%8D%9A%E6%96%87%E7%AE%A1%E7%90%86%E5%B9%B6%E5%8F%91%E5%B8%83%E5%88%B0%E7%BD%91%E7%AB%99/" class="prev" rel="prev" title="用Obsidian进行博文管理，并发布到网站"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>用Obsidian进行博文管理，并发布到网站</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.102.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Hlf</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

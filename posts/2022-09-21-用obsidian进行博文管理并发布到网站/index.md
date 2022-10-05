@@ -4,15 +4,15 @@
 ## 用Obsidian管理你的博文<!--more-->
 把hugo网页的存放文件夹作为Obsidian（以下简称OB）的库，就可以集中管理content文件夹下的博文.md文档。
 
-<div align=center>
-<img src="https://s1.vika.cn/space/2022/09/21/c1d8b7d160e2436aa0b2ad12c4b22e8f" alt="drawing" style="width:100%"/>
-</div>
-
 不过，如果仅从集中管理.md文件的角度来说，OB并不算特别，用logseq也可以。从书写的角度来说，OB的书写体验也不算突出。
 
 但是我还是认为，OB就是最适合的hugo博文管理工具，主要原因在于OB的quickadd、custom frame和shell commands这三个插件的配合，可以实现在OB中完成博文创建、调试和发布的全流程。
 
 以下我会进行介绍。
+
+<div align=center>
+<img src="https://s1.vika.cn/space/2022/09/21/c1d8b7d160e2436aa0b2ad12c4b22e8f" alt="drawing" style="width:100%"/>
+</div>
 
 ## Quickadd - 创建博文
 hugo的博文是以.md文件存在，并且主题的特性依赖于yaml，以我用的LoveIt主题来说，支持的特性就非常多。具体可以参考Loveit主题的介绍[Theme Documentation - Content - LoveIt (hugoloveit.com)](https://hugoloveit.com/theme-documentation-content/)

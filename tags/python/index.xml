@@ -4,7 +4,17 @@
         <link>https://nimamxd25.github.io/tags/python/</link>
         <description>Python - Tag - Hlf&#39;s Site</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>879251258@qq.com (Hlf)</managingEditor>
-            <webMaster>879251258@qq.com (Hlf)</webMaster><lastBuildDate>Tue, 20 Sep 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://nimamxd25.github.io/tags/python/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>879251258@qq.com (Hlf)</webMaster><lastBuildDate>Wed, 05 Oct 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://nimamxd25.github.io/tags/python/" rel="self" type="application/rss+xml" /><item>
+    <title>使用Python处理PDF的那些事</title>
+    <link>https://nimamxd25.github.io/posts/2022-10-05-%E4%BD%BF%E7%94%A8python%E5%A4%84%E7%90%86pdf%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/</link>
+    <pubDate>Wed, 05 Oct 2022 00:00:00 &#43;0000</pubDate>
+    <author>HLF</author>
+    <guid>https://nimamxd25.github.io/posts/2022-10-05-%E4%BD%BF%E7%94%A8python%E5%A4%84%E7%90%86pdf%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://s1.vika.cn/space/2022/10/05/1956368834db40e0a6ff080e20af9190" referrerpolicy="no-referrer">
+            </div>记录一下工作中用到的处理PDF的Python命令，涉及PDF的分割、文本提取、OCR识别等等 PDF分割、提取和删除 ^42737d 本文主要介绍使用PyPD]]></description>
+</item>
+<item>
     <title>在Obsidian里用Python，让你的Obsidian更强大！</title>
     <link>https://nimamxd25.github.io/posts/2022-09-20-%E5%9C%A8obsidian%E9%87%8C%E7%94%A8python%E8%AE%A9%E4%BD%A0%E7%9A%84obsidian%E6%9B%B4%E5%BC%BA%E5%A4%A7/</link>
     <pubDate>Tue, 20 Sep 2022 00:00:00 &#43;0000</pubDate>
