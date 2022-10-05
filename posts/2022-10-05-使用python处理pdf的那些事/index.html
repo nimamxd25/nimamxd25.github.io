@@ -180,8 +180,7 @@
 <li><strong>start_page、end_page</strong>：需要提取的PDF起始、结束页</li>
 <li><strong>output_pdf</strong>：导出的PDF路径（包含导出pdf名称，如&quot;D:/output.pdf&quot;）</li>
 </ul>
-<p>仔细看看代码就会发现，其实PyPDF2是将PDF每页读取，再将你需要的PDF进行合并，这样就完成了PDF的分割和提取。</p>
-<p>如果想删除某页，只需要修改<code>start_page</code>和 <code>end_page</code>即可</p>
+<p>仔细看看代码就会发现，其实PyPDF2是将PDF每页读取，再将你需要的PDF进行合并，这样就完成了PDF的分割和提取。如果想删除某页，只需要修改<code>start_page</code>和 <code>end_page</code>即可</p>
 <h2 id="pdf内容提取">PDF内容提取</h2>
 <h3 id="非扫描pdf">非扫描PDF</h3>
 <p><strong>非扫描PDF</strong>指的是通过文档直接转换的PDF，简单的判断依据就是你打开任意一个PDF阅读器，可以选取文本并复制。</p>

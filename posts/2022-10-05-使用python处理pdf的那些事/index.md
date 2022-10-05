@@ -31,9 +31,7 @@ def split_pdf(file_path, start_page, end_page, output_pdf):
 - **start_page、end_page**：需要提取的PDF起始、结束页
 - **output_pdf**：导出的PDF路径（包含导出pdf名称，如"D:/output.pdf"）
 
-仔细看看代码就会发现，其实PyPDF2是将PDF每页读取，再将你需要的PDF进行合并，这样就完成了PDF的分割和提取。
-
-如果想删除某页，只需要修改`start_page`和 `end_page`即可
+仔细看看代码就会发现，其实PyPDF2是将PDF每页读取，再将你需要的PDF进行合并，这样就完成了PDF的分割和提取。如果想删除某页，只需要修改`start_page`和 `end_page`即可
 
 ## PDF内容提取
 ### 非扫描PDF
