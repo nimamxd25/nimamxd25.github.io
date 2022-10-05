@@ -1,7 +1,7 @@
 # 使用Python处理PDF的那些事
 
 
-> 记录一下工作中用到的处理PDF的Python命令，涉及PDF的分割、文本提取、OCR识别等等
+> 记录一下工作中用到的处理PDF的Python命令，涉及PDF的分割、文本提取、OCR识别等等<!--more-->
 
 ## PDF分割、提取和删除
 

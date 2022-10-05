@@ -14,7 +14,9 @@
     <guid>https://nimamxd25.github.io/posts/2022-10-05-%E4%BD%BF%E7%94%A8python%E5%A4%84%E7%90%86pdf%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="https://s1.vika.cn/space/2022/10/05/1956368834db40e0a6ff080e20af9190" referrerpolicy="no-referrer">
-            </div>记录一下工作中用到的处理PDF的Python命令，涉及PDF的分割、文本提取、OCR识别等等 PDF分割、提取和删除 ^42737d 本文主要介绍使用PyPD]]></description>
+            </div><blockquote>
+<p>记录一下工作中用到的处理PDF的Python命令，涉及PDF的分割、文本提取、OCR识别等等</p>
+</blockquote>]]></description>
 </item>
 <item>
     <title>用Obsidian进行博文管理，并发布到网站</title>
