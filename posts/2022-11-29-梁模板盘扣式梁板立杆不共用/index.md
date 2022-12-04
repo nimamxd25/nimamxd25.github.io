@@ -91,7 +91,13 @@
 <img src="https://s1.vika.cn/space/2022/11/30/7ba2e155669b433baad24638ca5bc659" alt="drawing" style="width:50%"/>
 </div>
 
-- **最大步距h(mm)：** 轮扣节点间距(600mm)的整数倍，不得大于1800mm
+- **最大步距h(mm)：** 轮扣节点间距(500mm)的整数倍
+<div align=center>
+<img src="https://s1.vika.cn/space/2022/12/04/142dc2bce9c24249ba5d8ec0ff8f231c" alt="drawing" style="width:80%"/>
+<img src="https://s1.vika.cn/space/2022/12/04/61db9496362e4a1d997009efd703dc82" alt="drawing" style="width:100%"/>
+<img src="https://s1.vika.cn/space/2022/12/04/e1382397c61444b4aaaaa2d8165dd59b" alt="drawing" style="width:100%"/>
+</div>
+
 - **顶层步距h'：** 轮扣节点间距(600mm)的整数倍，比最大步距h缩小一个轮扣节点间距
 {{< admonition >}}
 如h=1800mm，h'=1200mm
