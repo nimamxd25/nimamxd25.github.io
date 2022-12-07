@@ -82,21 +82,21 @@
 {{< /admonition >}}
 
 - **梁跨度方向立杆间距la(mm)：** 见下图，300mm倍数
-<div align=center>
-<img src="https://s1.vika.cn/space/2022/11/30/d090d130d5b7432f86b76464648963d7" alt="drawing" style="width:50%"/>
-</div>
+	<div align=center>
+	<img src="https://s1.vika.cn/space/2022/11/30/d090d130d5b7432f86b76464648963d7" alt="drawing" style="width:50%"/>
+	</div>
 
 - **梁底两侧立杆横向间距lb(mm)：** 见下图，300mm倍数，大于梁宽
-<div align=center>
-<img src="https://s1.vika.cn/space/2022/11/30/7ba2e155669b433baad24638ca5bc659" alt="drawing" style="width:50%"/>
-</div>
+	<div align=center>
+	<img src="https://s1.vika.cn/space/2022/11/30/7ba2e155669b433baad24638ca5bc659" alt="drawing" style="width:50%"/>
+	</div>
 
 - **最大步距h(mm)：** 轮扣节点间距(500mm)的整数倍
-<div align=center>
-<img src="https://s1.vika.cn/space/2022/12/04/142dc2bce9c24249ba5d8ec0ff8f231c" alt="drawing" style="width:80%"/>
-<img src="https://s1.vika.cn/space/2022/12/04/61db9496362e4a1d997009efd703dc82" alt="drawing" style="width:100%"/>
-<img src="https://s1.vika.cn/space/2022/12/04/e1382397c61444b4aaaaa2d8165dd59b" alt="drawing" style="width:100%"/>
-</div>
+	<div align=center>
+	<img src="https://s1.vika.cn/space/2022/12/04/142dc2bce9c24249ba5d8ec0ff8f231c" alt="drawing" style="width:80%"/>
+	<img src="https://s1.vika.cn/space/2022/12/04/61db9496362e4a1d997009efd703dc82" alt="drawing" style="width:100%"/>
+	<img src="https://s1.vika.cn/space/2022/12/04/e1382397c61444b4aaaaa2d8165dd59b" alt="drawing" style="width:100%"/>
+	</div>
 
 - **顶层步距h'：** 轮扣节点间距(600mm)的整数倍，比最大步距h缩小一个轮扣节点间距
 {{< admonition >}}
@@ -108,25 +108,26 @@
 - 悬臂长度不应超过650mm，且丝杆外露长度不应超过400mm，可调托撑插入立杆或双槽托梁长度不得小于150mm
 - 支撑结构顶端可调托撑伸出顶层水平杆的悬臂长度不宜大于500mm
 {{< /admonition >}}
-<div align=center>
-<img src="https://s1.vika.cn/space/2022/11/30/3f829b87108c4822a8985eaf417d085f" alt="drawing" style="width:50%"/>
-</div>
+	<div align=center>
+	<img src="https://s1.vika.cn/space/2022/11/30/3f829b87108c4822a8985eaf417d085f" alt="drawing" style="width:50%"/>
+	</div>
 
 - **新浇混凝土楼板立杆纵横向间距la'、1b'**
-<div align=center>
-<img src="https://s1.vika.cn/space/2022/11/30/46160f4fad2a4fb0845fa3a48def3dfb" alt="drawing" style="width:50%"/>
-</div>
+	<div align=center>
+	<img src="https://s1.vika.cn/space/2022/11/30/46160f4fad2a4fb0845fa3a48def3dfb" alt="drawing" style="width:50%"/>
+	</div>
 
 - **梁底两侧立杆距离梁中心线距离s1、s2（mm）：** 梁两侧板底立柱到梁中心的距离，一般s1=s2，即梁居中
-<div align=center>
-<img src="https://s1.vika.cn/space/2022/11/30/98e55a1b7d1748c88d9542347ab4314f" alt="drawing" style="width:50%"/>
-</div>
+	<div align=center>
+	<img src="https://s1.vika.cn/space/2022/11/30/98e55a1b7d1748c88d9542347ab4314f" alt="drawing" style="width:50%"/>
+	</div>
 
 - **梁底增加立杆根数：** 根据梁宽以及保证梁底立杆间距为300mm整数倍来确定
 - **梁底支撑小梁根数：** 小梁间距100mm~150mm为宜
-{{< admonition >}}
+
+	{{< admonition >}}
 如600mm宽梁，底部设5根小梁，间距为600/(5-1)=150mm
-{{< /admonition >}}
+	{{< /admonition >}}
 
 - **每纵距内附加梁底支撑主梁根数：**
 	- 若为0，则仅有横向主梁（图中红色），梁底主梁位于承托内
@@ -151,12 +152,13 @@
 	<div align=center>
 	<img src="https://s1.vika.cn/space/2022/11/30/d28cc63ce8534fbbb165cec38c27ef04" alt="drawing" style="width:80%"/>
 	</div>
-{{< admonition >}}
+	
+	{{< admonition >}}
 - 类型：覆面胶合板
 	- 厚度：18mm
 	- 抗弯强度15(N/mm<sup>2</sup>)，抗剪强度1.4(N/mm<sup>2</sup>)，弹性模量6000(N/mm<sup>2</sup>)
 - 若不确定，直接用默认参数
-{{< /admonition >}}
+	{{< /admonition >}}
 
 ## 小梁&主梁（次/主楞）
 - **材料：** 根据现场实际所用模板材料结合软件内置参数选择
@@ -167,12 +169,12 @@
 	<img src="https://s1.vika.cn/space/2022/11/30/9655ab539ea34cbbbf5ad51488d5a26b" alt="drawing" style="width:100%"/>
 	<img src="https://s1.vika.cn/space/2022/11/30/b2bcfa7a56a4409da35e3831d8a36a42" alt="drawing" style="width:80%"/>
 	</div> 
-{{< admonition >}}
+	{{< admonition >}}
 - 类型：方钢管
 	- 截面尺寸：50×50×2.5
 	- 惯性矩&抵抗矩：软件自动计算
 	- 抗弯强度205(N/mm<sup>2</sup>)，抗剪强度125(N/mm<sup>2</sup>)，弹性模量206000(N/mm<sup>2</sup>)
-{{< /admonition >}}
+	{{< /admonition >}}
 
 ## 可调托座
 - **可调托座内主梁根数：** 一般1根或2根
