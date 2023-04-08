@@ -86,3 +86,9 @@ if __name__ == '__main__':
 
 	print(f'合计需要{total_days}天, 预计{today+datetime.timedelta(days=total_days+30)}看完')
 ```
+
+运行结果
+
+<div align=center>
+<img src="https://s1.vika.cn/space/2023/04/08/3b8baee8311c4c4c90d8ca92158c7fcb" alt="drawing" style="width:100%"/>
+</div>
