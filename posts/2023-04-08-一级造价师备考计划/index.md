@@ -18,6 +18,7 @@
 
 ## 2. 课程讲师&时间（一造）
 
+### 复习顺序
 按照复习顺序为：
 
 1.  《建设工程造价**管理**》：达江
@@ -32,12 +33,9 @@
 > -   按照每天2小时复习时间，每天看4个视频+刷题，需要98天，预计9月初完成    
 > -   后续巩固1~2月
 
-## 刷题
+### 估算复习时间的python脚本
 
-[考试宝](https://www.zaixiankaoshi.com/)是一个不错的刷题平台，题目比较全，错题收集、收藏题目等功能都比较齐全。不过只建议刷选择题。
-
-## 估算复习时间的python脚本
-
+上述时间是通过下边这个python脚本计算出来的
 ```python
 import cv2
 import time
@@ -87,8 +85,48 @@ if __name__ == '__main__':
 	print(f'合计需要{total_days}天, 预计{today+datetime.timedelta(days=total_days+30)}看完')
 ```
 
-运行结果
+## 刷题&记忆
 
-<div align=center>
-<img src="https://s1.vika.cn/space/2023/04/08/3b8baee8311c4c4c90d8ca92158c7fcb" alt="drawing" style="width:100%"/>
-</div>
+### 刷题
+
+[考试宝](https://www.zaixiankaoshi.com/)是一个不错的刷题平台，题目比较全，错题收集、收藏题目等功能都比较齐全。不过只建议刷选择题。
+考试宝还支持导入自定义题库，一般需要对题目文档进行处理，可以参考[使用Python处理PDF的那些事](https://www.hlffmm.cc/posts/2022-10-05-使用oython处理pdf的那些事)
+
+### 记忆
+
+记忆推荐使用anki，原版的有点不好看，推荐使用[Anki记忆卡](https://ankimemory.com/)，有着更友好的使用体验。
+
+不过一建、一造考试记忆的知识点较多，手动建立卡片不太现实，我也是采用python来处理。简单的代码如下
+
+```python
+import os
+import genanki
+
+# 定义卡片模板
+my_model = genanki.Model(
+  1091735104,
+  'Simple Model with Media',
+  fields=[
+    {'name': '正面'},
+    {'name': '背面'}],
+  templates=[
+    {
+      'name': 'Card 1',
+      'qfmt': '{{正面}}',
+      'afmt': '{{正面}}<hr id="answer">{{背面}}',
+    },
+  ])
+
+# 设置卡组
+deck_id = random.randrange(1 << 30, 1 << 31)
+my_deck = genanki.Deck(deck_id, file_name)
+
+# 添加卡片，需要自行处理文档获取 问题及答案 
+my_note = genanki.Note(model=my_model,fields=[question, answer])
+y_deck.add_note(my_note)
+
+# 打包到.apkg
+# 牌组设置成一个包
+my_package = genanki.Package(my_deck)
+my_package.write_to_file(f'{file_name}.apkg')
+```
