@@ -6,10 +6,22 @@
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>879251258@qq.com (Hlf)</managingEditor>
             <webMaster>879251258@qq.com (Hlf)</webMaster><lastBuildDate>Thu, 30 Mar 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://nimamxd25.github.io/categories/%E6%8A%80%E6%9C%AF/" rel="self" type="application/rss+xml" /><item>
     <title>Matplotlib自定义全局字体</title>
-    <link>https://nimamxd25.github.io/posts/2023-03-30-matplotlib%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93/</link>
+    <link>https://nimamxd25.github.io/posts/2023-03-30-matplotlib%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93-new/</link>
     <pubDate>Thu, 30 Mar 2023 00:00:00 &#43;0000</pubDate>
     <author>HLF</author>
-    <guid>https://nimamxd25.github.io/posts/2023-03-30-matplotlib%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93/</guid>
+    <guid>https://nimamxd25.github.io/posts/2023-03-30-matplotlib%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93-new/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://raw.githubusercontent.com/nimamxd25/blogimg/main/img/2023-03-30-Matplotlib%e8%87%aa%e5%ae%9a%e4%b9%89%e5%ad%97%e4%bd%93-0.jpg" referrerpolicy="no-referrer">
+            </div><blockquote>
+<p>Matplotlib如果想使用非系统字体就很麻烦，记录一下</p>
+</blockquote>]]></description>
+</item>
+<item>
+    <title>Matplotlib自定义全局字体</title>
+    <link>https://nimamxd25.github.io/%E5%BD%92%E6%A1%A3-vika/2023-03-30-matplotlib%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93/</link>
+    <pubDate>Thu, 30 Mar 2023 00:00:00 &#43;0000</pubDate>
+    <author>HLF</author>
+    <guid>https://nimamxd25.github.io/%E5%BD%92%E6%A1%A3-vika/2023-03-30-matplotlib%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="https://s1.vika.cn/space/2023/03/30/cb34326b249643c7a475bb270709cc83" referrerpolicy="no-referrer">
             </div><blockquote>
@@ -50,10 +62,10 @@
 </item>
 <item>
     <title>快速清空GitHub仓库</title>
-    <link>https://nimamxd25.github.io/posts/2022-09-19-%E5%BF%AB%E9%80%9F%E6%B8%85%E7%A9%BAgithub%E4%BB%93%E5%BA%93/</link>
+    <link>https://nimamxd25.github.io/%E5%BD%92%E6%A1%A3-vika/2022-09-19-%E5%BF%AB%E9%80%9F%E6%B8%85%E7%A9%BAgithub%E4%BB%93%E5%BA%93/</link>
     <pubDate>Mon, 19 Sep 2022 00:00:00 &#43;0000</pubDate>
     <author>HLF</author>
-    <guid>https://nimamxd25.github.io/posts/2022-09-19-%E5%BF%AB%E9%80%9F%E6%B8%85%E7%A9%BAgithub%E4%BB%93%E5%BA%93/</guid>
+    <guid>https://nimamxd25.github.io/%E5%BD%92%E6%A1%A3-vika/2022-09-19-%E5%BF%AB%E9%80%9F%E6%B8%85%E7%A9%BAgithub%E4%BB%93%E5%BA%93/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="https://s1.vika.cn/space/2022/09/20/434d91ea0e914914a78f8c478075715f" referrerpolicy="no-referrer">
             </div><p>由于一些原因，你可能需要清空一个GitHub仓库，并重新开始，比如你搞砸了一个项目，或者生成的网页你不需要了。</p>]]></description>

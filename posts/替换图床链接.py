@@ -9,7 +9,7 @@ headers = {
     'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.62',
 }
 
-file = '2022-12-07-落地式脚手架搭设要点'
+file = '2023-04-10-怎么减脂不掉肌肉'
 with open(f'{file}.md', 'r', encoding='utf-8') as f:
     text = f.read()
     url = re.findall('https?://s1\.vika\.cn/space/[^()"\s]+', text)
