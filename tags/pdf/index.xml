@@ -6,12 +6,12 @@
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>879251258@qq.com (Hlf)</managingEditor>
             <webMaster>879251258@qq.com (Hlf)</webMaster><lastBuildDate>Wed, 05 Oct 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://nimamxd25.github.io/tags/pdf/" rel="self" type="application/rss+xml" /><item>
     <title>使用Python处理PDF的那些事</title>
-    <link>https://nimamxd25.github.io/posts/2022-10-05-%E4%BD%BF%E7%94%A8python%E5%A4%84%E7%90%86pdf%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/</link>
+    <link>https://nimamxd25.github.io/posts/2022-10-05-%E4%BD%BF%E7%94%A8python%E5%A4%84%E7%90%86pdf%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B-new/</link>
     <pubDate>Wed, 05 Oct 2022 00:00:00 &#43;0000</pubDate>
     <author>HLF</author>
-    <guid>https://nimamxd25.github.io/posts/2022-10-05-%E4%BD%BF%E7%94%A8python%E5%A4%84%E7%90%86pdf%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/</guid>
+    <guid>https://nimamxd25.github.io/posts/2022-10-05-%E4%BD%BF%E7%94%A8python%E5%A4%84%E7%90%86pdf%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B-new/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="https://s1.vika.cn/space/2022/10/05/1956368834db40e0a6ff080e20af9190" referrerpolicy="no-referrer">
+                <img src="https://raw.githubusercontent.com/nimamxd25/blogimg/main/img/2022-10-05-%e4%bd%bf%e7%94%a8Python%e5%a4%84%e7%90%86PDF%e7%9a%84%e9%82%a3%e4%ba%9b%e4%ba%8b-0.jpg" referrerpolicy="no-referrer">
             </div><blockquote>
 <p>记录一下工作中用到的处理PDF的Python命令，涉及PDF的分割、文本提取、OCR识别等等</p>
 </blockquote>]]></description>
